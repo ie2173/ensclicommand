@@ -49,7 +49,7 @@ cargo install --path .
 After installation, you can run the CLI directly by name:
 
 ```bash
-myapp --help
+ens --help
 ```
 
 ### Install from GitHub (for users)
@@ -61,20 +61,20 @@ cargo install --git https://github.com/yourusername/yourrepo
 ### Uninstall
 
 ```bash
-cargo uninstall myapp
+cargo uninstall ens
 ```
 
 ## Usage
 
 ```bash
 # Show help
-myapp --help
+ens --help
 
 # Run a command
-myapp init --path /path/to/project
+ens init --path /path/to/project
 
 # Use verbose mode
-myapp run --verbose
+ens run --verbose
 ```
 
 ## Project Structure
@@ -95,11 +95,11 @@ src/
 
 ```bash
 # Instead of typing cargo run -- every time, create an alias
-alias myapp-dev='cargo run --'
+alias ens-dev='cargo run --'
 
 # Then use it like:
-myapp-dev --help
-myapp-dev init --path /tmp
+ens-dev --help
+ens-dev init --path /tmp
 ```
 
 ### Quick Testing
@@ -128,10 +128,10 @@ cargo install --path .
 cargo build --release
 
 # Copy to a directory in your PATH
-cp target/release/myapp ~/.local/bin/
+cp target/release/ens ~/.local/bin/
 
 # Or create a symlink
-ln -s $(pwd)/target/release/myapp ~/.local/bin/myapp
+ln -s $(pwd)/target/release/ens ~/.local/bin/ens
 ```
 
 **Option 3: Add target/release to PATH**
@@ -146,12 +146,12 @@ Make sure your `Cargo.toml` has the binary configured:
 
 ```toml
 [package]
-name = "myapp"
+name = "ens"
 version = "0.1.0"
 edition = "2021"
 
 [[bin]]
-name = "myapp"
+name = "ens"
 path = "src/main.rs"
 
 [dependencies]
@@ -173,7 +173,7 @@ cargo publish
 
 Then others can install with:
 ```bash
-cargo install myapp
+cargo install ens
 ```
 
 ## Contributing
